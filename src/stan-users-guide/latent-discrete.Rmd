@@ -80,7 +80,7 @@ $$
 p(e,l,s,D)
  =  p(e) \, p(l) \, p(s) \, p(D | s, e, l)
 \\
- = 
+ =
 \mathsf{Exponential}(e|r_e) \ \mathsf{Exponential}(l|r_l) \
 \mathsf{Uniform}(s|1, T)
 \prod_{t=1}^T \mathsf{Poisson}(D_t | t < s \ ? \ e \ : \ l),
@@ -117,7 +117,7 @@ Stan operates on the log scale and thus requires the log likelihood,
 
 $$
 \log p(D | e,l) =
-\mbox{log\_sum\_exp}_{s=1}^T
+\mbox{log_sum_exp}_{s=1}^T
 (
  \log \mathsf{Uniform}(s \, | \, 1, T)
 + \sum_{t=1}^T \log \mathsf{Poisson}(D_t \, | \, t < s \ ?
@@ -126,7 +126,7 @@ $$
 
 where the log sum of exponents function is defined by
 $$
-\mbox{log\_sum\_exp}_{n=1}^N \, \alpha_n
+\mbox{log_sum_exp}_{n=1}^N \, \alpha_n
 \ = \
 \log \sum_{n=1}^N \mbox{exp}(\alpha_n).
 $$
@@ -421,7 +421,7 @@ mark-recapture study.  The lower bound on $N$ is necessary to
 efficiently eliminate impossible values.
 
 The probabilistic variant of the Lincoln-Petersen estimator can be
-directly coded in Stan as shown in the Lincon-Petersen model figure. 
+directly coded in Stan as shown in the Lincon-Petersen model figure.
 The Lincoln-Petersen estimate is the maximum likelihood estimate (MLE)
 for this model.
 
@@ -1082,4 +1082,3 @@ function to `log_q_z[i]` provides a simplex corresponding to
 the probability mass function of $z_i$ in the posterior.   These may
 be averaged across the iterations to provide the posterior probability
 distribution over each $z_i$.
-

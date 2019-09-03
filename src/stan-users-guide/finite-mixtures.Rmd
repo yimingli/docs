@@ -68,7 +68,7 @@ The log sum of exponentials function is used to define mixtures on the
 log scale.  It is defined for two inputs by
 
 $$
-\mbox{log\_sum\_exp}(a, b) = \log (\exp(a) + \exp(b)).
+\mbox{log_sum_exp}(a, b) = \log (\exp(a) + \exp(b)).
 $$
 
 If $a$ and $b$ are probabilities on the log scale, then $\exp(a) +
@@ -112,10 +112,10 @@ $$
   \mathsf{normal}(y|3,1) \, \right)
 \\
  = \log(
-                 \exp(\log(0.3 * \mathsf{normal}(y|-1,2))) 
+                 \exp(\log(0.3 * \mathsf{normal}(y|-1,2)))
                  + \exp(\log(0.7 * \mathsf{normal}(y|3,1))) )
 \\
- = \mbox{log\_sum\_exp}(
+ = \mbox{log_sum_exp}(
                          \log(0.3) + \log \mathsf{normal}(y|-1,2),
                          \log(0.7) + \log \mathsf{normal}(y|3,1) ).
 $$
@@ -154,9 +154,9 @@ $$
 The result follows from the identity
 
 $$
-\mbox{log\_sum\_exp}(c + a, c + b)
+\mbox{log_sum_exp}(c + a, c + b)
 \ = \
-c + \mbox{log\_sum\_exp(a, b)}
+c + \mbox{log_sum_exp}(a, b)
 $$
 
 and the fact that adding a constant $c$ to the log density accumulator
@@ -746,4 +746,3 @@ regularizing priors.  If computation becomes a bottleneck, the only
 recourse can be model averaging, which can be calculated after fitting
 each model independently (see @HoetingEtAl:1999 and
 @GelmanEtAl:2013 for theoretical and computational details).
-
